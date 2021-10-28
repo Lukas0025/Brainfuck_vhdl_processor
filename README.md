@@ -2,17 +2,17 @@
 Simple Brainf*ck processor writed on vhdl. Semestral project for INP BUT FIT
 
 ### Instruction set
-| command | OP   |                                             | c pseudo code          |
-|---------|------|---------------------------------------------|------------------------|
-|  >      | 0x3e | increment pointer                           | ptr++;                 |
-|  <      | 0x3c | decrement pointer                           | ptr--;                 |
-|  +      | 0x2b | increment data on pointer                   | data[ptr]++;           |
-|  -      | 0x2d | decrement data on pointer                   | data[ptr]--;           |
-| [       | 0x5b | cycle begin                                 | do {                   |
-| ]       | 0x5d | jump to cycle begin if data on opeter not 0 | } while(data[ptr] != 0)|
-| .       | 0x2e | write data on pointer to output             | out = data[ptr]        |
-| ,       | 0x2c | write input to data on pointer              | data[ptr] = in         |
-| null    | 0x00 | stop work. Only restart to start again      | exit();                |
+| command | OP   |                                              | c pseudo code          |
+|---------|------|----------------------------------------------|------------------------|
+|  >      | 0x3e | increment pointer                            | ptr++;                 |
+|  <      | 0x3c | decrement pointer                            | ptr--;                 |
+|  +      | 0x2b | increment data on pointer                    | data[ptr]++;           |
+|  -      | 0x2d | decrement data on pointer                    | data[ptr]--;           |
+| [       | 0x5b | cycle begin                                  | do {                   |
+| ]       | 0x5d | jump to cycle begin if data on pointer not 0 | } while(data[ptr] != 0)|
+| .       | 0x2e | write data on pointer to output              | out = data[ptr]        |
+| ,       | 0x2c | write input to data on pointer               | data[ptr] = in         |
+| null    | 0x00 | stop work. Only restart to start again       | exit();                |
 
 ### Ports
 ```vhdl
