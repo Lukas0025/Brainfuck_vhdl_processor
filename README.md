@@ -8,8 +8,8 @@ Simple Brainf*ck processor writed on vhdl. Semestral project for INP BUT FIT
 |  <      | 0x3c | decrement pointer                            | ptr--;                 |
 |  +      | 0x2b | increment data on pointer                    | data[ptr]++;           |
 |  -      | 0x2d | decrement data on pointer                    | data[ptr]--;           |
-| [       | 0x5b | cycle begin                                  | do {                   |
-| ]       | 0x5d | jump to cycle begin if data on pointer not 0 | } while(data[ptr] != 0)|
+| [       | 0x5b | cycle begin, jump to cycle end if data is 0  | while(data[ptr] != 0)  |
+| ]       | 0x5d | jump to cycle begin if data on pointer not 0 | } //while end          |
 | .       | 0x2e | write data on pointer to output              | out = data[ptr]        |
 | ,       | 0x2c | write input to data on pointer               | data[ptr] = in         |
 | null    | 0x00 | stop work. Only restart to start again       | exit();                |
